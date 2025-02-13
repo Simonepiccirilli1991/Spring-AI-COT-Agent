@@ -1,0 +1,19 @@
+spring:
+  application.name: ai cot agent
+
+  threads.virtual.enabled: true
+
+  main:
+    allow-bean-definition-overriding: true
+    profile:
+      active: default
+
+  ai:
+    ollama:
+      base-url: http://localhost:11434
+      chat:
+        options:
+          model: deepseek-r1:1.5b
+
+server:
+  port: 9091
