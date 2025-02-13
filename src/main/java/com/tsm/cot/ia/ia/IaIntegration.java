@@ -41,11 +41,11 @@ public class IaIntegration {
         return response;
     }
 
-
+    // NB, con deepseeak formatta di merda al momento , trovare fix o tornare su llama o mistral
     public String cotChat(String userRequest){
         log.info("CotChat integration started");
         // creo lista dei sistem prompt
-        var systemPromptsChain = List.of(Prompts.BasePrompt,Prompts.CheckPrompt,Prompts.ValidatePrompt);
+        var systemPromptsChain = List.of(Prompts.BasePrompt,Prompts.CheckPrompt,Prompts.ValidatePrompt,Prompts.DeepSeekTakeFinal);
         // inizializo response vuota
         var response = "";
         // inizio il ciclo per la chain of trough

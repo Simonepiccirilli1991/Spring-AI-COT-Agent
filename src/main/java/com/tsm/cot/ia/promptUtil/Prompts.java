@@ -18,8 +18,10 @@ public enum Prompts {
             In case is not valid, response in a valid way to user request.
             In case u can't respond in a valid way, return this msg to the user:
             'Sorry but as now i can't fullfill ur request, fix me and retry'
+            """),
+    DeepSeekTakeFinal("""
+            return a response only with the final messagge, removed the thinking
             """);
-
     private final String prompt;
 
     Prompts(String prompt) {
